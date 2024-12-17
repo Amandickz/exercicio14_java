@@ -15,8 +15,6 @@ public class ContractService {
 
     public void processContract(Contract contract, Integer months) {
 
-        System.out.println("Processing contract: " + contract);
-
         double installmentValue = contract.getTotalValue() / months;
 
         for(int i = 1; i <= months; i++) {

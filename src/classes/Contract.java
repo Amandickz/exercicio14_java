@@ -46,6 +46,7 @@ public class Contract {
 
     @Override
     public String toString() {
+
         return "Contract{" +
                 "number=" + number +
                 ", date=" + date +

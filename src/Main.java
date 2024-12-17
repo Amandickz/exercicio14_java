@@ -1,10 +1,12 @@
 import classes.Contract;
+import classes.Installment;
 import services.ContractService;
 import services.PaypalService;
 
 import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -35,6 +37,11 @@ public class Main {
         ContractService contractService = new ContractService(new PaypalService());
 
         contractService.processContract(contract,months);
+
+        System.out.println("Parcelas:");
+        for (Installment installment : contract.getInstalments()){
+            System.out.println(fmt.format(installment.getDueDate()) + " - " + installment.getAmount());
+        }
 
 
     }
