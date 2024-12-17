@@ -2,14 +2,13 @@ package classes;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Contract {
 
     private Integer number;
     private LocalDate date;
     private double totalValue;
-    private ArrayList<Instalment> instalments;
+    private ArrayList<Installment> instalments = new ArrayList<>();
 
     public Contract(Integer number, LocalDate date, double totalValue) {
         this.number = number;
@@ -41,7 +40,7 @@ public class Contract {
         this.totalValue = totalValue;
     }
 
-    public ArrayList<Instalment> getInstalments() {
+    public ArrayList<Installment> getInstalments() {
         return instalments;
     }
 

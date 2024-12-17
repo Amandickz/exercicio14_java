@@ -32,12 +32,9 @@ public class Main {
 
         Contract contract = new Contract(number, date, totalValue);
 
-        System.out.println(contract);
-
         ContractService contractService = new ContractService(new PaypalService());
 
         contractService.processContract(contract,months);
-
 
 
     }

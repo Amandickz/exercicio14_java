@@ -1,22 +1,23 @@
 package classes;
 
+import java.time.LocalDate;
 import java.util.Date;
 
-public class Instalment {
+public class Installment {
 
-    private Date dueDate;
+    private LocalDate dueDate;
     private double amount;
 
-    public Instalment(Date dueDate, double amount) {
+    public Installment(LocalDate dueDate, double amount) {
         this.dueDate = dueDate;
         this.amount = amount;
     }
 
-    public Date getDueDate() {
+    public LocalDate getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(Date dueDate) {
+    public void setDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
     }
 
